@@ -5,7 +5,7 @@ const DashBoardLayout = () => {
 
     return (
         <div>
-            <div class="grid grid-cols-3 gap-1">
+            <div className="grid grid-cols-3 lg:max-w-screen-md ">
                 <div>
                     <ul className="menu h-screen p-4 lg:w-52 md:w-52 w-32 bg-orange-200 text-base-content">
                         <li className='bg-black text-white rounded'>
@@ -15,7 +15,7 @@ const DashBoardLayout = () => {
                         <li><Link to={'/dashboard/'}>Profile</Link></li>
                     </ul>
                 </div>
-                <div class="col-span-2 ...">
+                <div className="col-span-2 ...">
                     <Outlet></Outlet>
                 </div>
             </div>
