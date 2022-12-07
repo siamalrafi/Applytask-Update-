@@ -40,7 +40,6 @@ const Navbar = () => {
         }
 
 
-
         <div className="form-control mt-2">
             <label className="label cursor-pointer">
             </label>

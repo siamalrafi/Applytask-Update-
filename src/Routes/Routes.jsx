@@ -4,8 +4,9 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import DashBoardLayout from '../Layout/DashBoardLayout';
+import Dashboard from '../Pages/Dashboard/Dashboard';
 
- 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +30,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <DashBoardLayout></DashBoardLayout>
+        element: <DashBoardLayout></DashBoardLayout>,
+        children: [
+          {
+            path: '/dashboard/home',
+            element: <Dashboard></Dashboard>
+          }
+        ]
       },
 
     ]
