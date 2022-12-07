@@ -14,7 +14,9 @@ const Navbar = () => {
             <Link to={'/home'}>Home</Link></li>
 
         <li className='hover:bg-red-500 font-bold rounded-lg'>
-            <Link to={'/dashboard'}>DashBoard</Link></li>
+            <Link to={'/dashboard'}>
+                <label htmlFor="deshboard-drawer">DashBoard</label>
+                </Link></li>
 
         <li className='hover:bg-red-500 font-bold rounded-lg'>
             <Link to={'/'}>About</Link></li>
