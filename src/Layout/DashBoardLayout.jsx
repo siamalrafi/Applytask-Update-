@@ -15,7 +15,7 @@ const DashBoardLayout = () => {
                         <li><Link to={'/dashboard/'}>Profile</Link></li>
                     </ul>
                 </div>
-                <div className="col-span-2 ...">
+                <div className="col-span-2">
                     <Outlet></Outlet>
                 </div>
             </div>
