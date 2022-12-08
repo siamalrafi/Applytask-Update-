@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext }  from '../Context/AuthProvider';
+import { AuthContext } from '../Context/AuthProvider';
 
 
 const Login = () => {
@@ -20,10 +19,10 @@ const Login = () => {
         signIn(data.email, data.password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                navigate(from, { replace: true });
+
             })
             .catch(error => {
-                console.log(error.message)
                 setLoginError(error.message);
             });
     };
@@ -34,11 +33,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 navigate(from, { replace: true });
-
             })
             .then(error => {
-                toast.error('Something went wrong, try again. ')
-                console.log(error);
             })
     };
 

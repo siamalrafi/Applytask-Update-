@@ -16,42 +16,7 @@ const SignUp = () => {
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
-
-                const currentUser = {
-                    email: data?.email,
-                };
-                console.log(currentUser);
-                fetch('https://my-mirraw-server.vercel.app/jwt', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(currentUser)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        localStorage.setItem('accessToken', data.token);
-                        navigate('/');
-                    })
-                updateUser(data.name, data.userType)
-                    .then(() => {
-                        const userInformation = {
-                            name: user?.displayName,
-                            email: user?.email,
-                            userType: data?.userType
-                        };
-                        fetch('https://my-mirraw-server.vercel.app/users', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(userInformation)
-                        })
-                            .then(res => res.json())
-                            .then(data => {
-                                toast.success('User Created Successfully.');
-                                navigate('/')
-                            })
-                    })
-                    .catch(err => console.log(err));
+                navigate('/')
             })
             .catch(error => {
                 console.log(error)
@@ -64,11 +29,8 @@ const SignUp = () => {
         googelSign()
             .then(result => {
                 const user = result.user;
+                navigate('/')
 
-                const currentUser = {
-                    email: user?.email,
-                };
-                console.log(currentUser);
             })
             .then(error => {
                 console.log(error);
