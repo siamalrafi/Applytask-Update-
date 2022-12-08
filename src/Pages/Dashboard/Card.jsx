@@ -3,7 +3,7 @@ import React from 'react';
 const Card = () => {
     return (
         <div>
-            <div className="card card-compact w-36 bg-base-100 shadow-xl">
+            <div className="card mt-3 card-compact w-36 bg-base-100 shadow-xl">
                 <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Shoes!</h2>

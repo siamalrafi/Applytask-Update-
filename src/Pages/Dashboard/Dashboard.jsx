@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from './Card';
+import { FaBeer, FaPlusCircle } from 'react-icons/fa';
+
 
 const Dashboard = () => {
     const profliPics = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -41,15 +43,15 @@ const Dashboard = () => {
                 </div>
 
                 <div className="avatar flex-col items-center">
-                    <div className="w-10 m-2 rounded-full">
-                        <img src="https://placeimg.com/192/192/people" />
+                    <div className='text-5xl border-spacing-3'>
+                        <FaPlusCircle />
                     </div>
                     <h1>Me</h1>
                 </div>
                 {
                     profliPics?.map((profliPic, i) =>
                         <div key={i} className="avatar flex-col items-center">
-                            <div className="w-8 m-2 rounded-full">
+                            <div className="w-12 m-2 rounded-full">
                                 <img src="https://placeimg.com/192/192/people" />
                             </div>
                             <h1>Name</h1>
@@ -65,8 +67,10 @@ const Dashboard = () => {
                     <h1 className='text-xl my-5 font-bold text-black'>Top 10 Article</h1>
                 </div>
             </div>
+
             {/*Top 10 Article section */}
-            <div className='px-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
+
+            <div className='px-10 grid lg:grid-cols-4 md:grid-cols-3  justify-items-center'>
 
                 {
                     cards?.map((card, i) => <Card key={i}>

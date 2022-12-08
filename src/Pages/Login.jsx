@@ -20,24 +20,24 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 navigate(from, { replace: true });
-
             })
             .catch(error => {
+                console.log(error.message)
                 setLoginError(error.message);
             });
     };
-
 
     const handleGoogleSign = () => {
         googelSign()
             .then(result => {
                 const user = result.user;
                 navigate(from, { replace: true });
+
             })
             .then(error => {
+                console.log(error);
             })
     };
-
 
     return (
         <div className='h-[500px] flex justify-center items-center'>

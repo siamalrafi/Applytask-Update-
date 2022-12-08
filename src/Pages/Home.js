@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -12,7 +13,9 @@ const Home = () => {
                         <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl dark:text-gray-900">
                             MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas!</p>
                         <div className="flex flex-wrap justify-center">
-                            <button type="button" className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-800 dark:text-gray-50">Go To DashBoard</button>
+                            <Link to={'/dashboard'}>
+                                <button type="button" className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-800 dark:text-gray-50">Go To DashBoard</button>
+                            </Link>
                             <button type="button" className="px-8 py-3 m-2 text-lg border rounded dark:border-gray-700 btn-outline dark:text-gray-900">Learn more</button>
                         </div>
                     </div>
