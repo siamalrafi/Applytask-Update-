@@ -1,7 +1,9 @@
 import React from 'react';
+import Card from './Card';
 
 const Dashboard = () => {
     const profliPics = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,];
 
     return (
         <div>
@@ -31,7 +33,9 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div>
+            {/* shorts section */}
+
+            <div className='px-10'>
                 <div>
                     <h1 className='text-xl text-black'>Shorts</h1>
                 </div>
@@ -56,9 +60,22 @@ const Dashboard = () => {
                 }
             </div>
 
+            <div className='px-10'>
+                <div>
+                    <h1 className='text-xl my-5 font-bold text-black'>Top 10 Article</h1>
+                </div>
+            </div>
+            {/*Top 10 Article section */}
+            <div className='px-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
+
+                {
+                    cards?.map((card, i) => <Card key={i}>
+
+                    </Card>)
+                }
 
 
-
+            </div>
 
 
         </div>
